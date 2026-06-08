@@ -1,0 +1,1254 @@
+/* ============================================
+   RESET E ESTILOS GERAIS
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #000;
+}
+
+/* ============================================
+   HEADER COM LOGO E NAVEGAÇÃO
+   ============================================ */
+
+.header-container {
+  background-color: #000;
+  color: #fff;
+  padding: 170px;
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.8);
+}
+
+.header-container-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.header-bg-logo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.header-bg-logo .logo-img {
+  width: 559px;
+  height: auto;
+  object-fit: contain;
+  filter: none;
+  margin-top: -137px;
+}
+
+.img {
+  width: 10px;
+  height: 10px;
+  border-radius: 10%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", system-ui, sans-serif;
+}
+
+.logo-link:hover {
+  color: #ff6347;
+}
+
+/* Navegação principal (links de topo, se usar) */
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav ul li a:hover {
+  color: #e2e620;
+}
+
+/* ============================================
+   LOADER (From Uiverse.io by dexter-st)
+   ============================================ */
+
+.loader-wrapper {
+  position: absolute;
+  left: -90px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: auto;
+  margin: 0;
+  font-family: "Montserrat", Montserrat;
+  font-size: 1em;
+  font-weight: 100;
+  user-select: none;
+  color: #fff;
+  scale: 2;
+}
+
+.loader-palavra {
+  line-height: 1;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: transparent;
+  mask: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 6px,
+    black 7px,
+    black 8px
+  );
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 50% 50%, #ff0 0%, transparent 50%),
+    radial-gradient(circle at 45% 45%, #f00 0%, transparent 45%),
+    radial-gradient(circle at 55% 55%, #0ff 0%, transparent 45%),
+    radial-gradient(circle at 45% 55%, #0f0 0%, transparent 45%),
+    radial-gradient(circle at 55% 45%, #00f 0%, transparent 45%);
+  mask: radial-gradient(
+    circle at 50% 50%,
+    transparent 0%,
+    transparent 10%,
+    black 25%
+  );
+  animation:
+    transform-animation 2s infinite alternate,
+    opacity-animation 4s infinite;
+  animation-timing-function: cubic-bezier(0.6, 0.8, 0.5, 1);
+}
+
+@keyframes transform-animation {
+  0% {
+    transform: translate(-55%);
+  }
+  100% {
+    transform: translate(55%);
+  }
+}
+
+@keyframes opacity-animation {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+}
+
+.loader-letter {
+  display: inline-block;
+  opacity: 0;
+  animation: loader-letter-anim 4s infinite linear;
+  z-index: 2;
+}
+
+.loader-letter:nth-child(1) { animation-delay: 0.1s; }
+.loader-letter:nth-child(2) { animation-delay: 0.205s; }
+.loader-letter:nth-child(3) { animation-delay: 0.31s; }
+.loader-letter:nth-child(4) { animation-delay: 0.415s; }
+.loader-letter:nth-child(5) { animation-delay: 0.521s; }
+.loader-letter:nth-child(6) { animation-delay: 0.626s; }
+.loader-letter:nth-child(7) { animation-delay: 0.731s; }
+.loader-letter:nth-child(8) { animation-delay: 0.837s; }
+.loader-letter:nth-child(9) { animation-delay: 0.942s; }
+.loader-letter:nth-child(10) { animation-delay: 1.047s; }
+
+@keyframes loader-letter-anim {
+  0% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+    text-shadow: 0 0 4px #fff;
+    transform: scale(1.1) translateY(-2px);
+  }
+  10% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Efeito de surgimento genérico */
+
+.surge-from-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.surge-from-right.surge-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================
+   INDICADOR DE SCROLL
+   ============================================ */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.scroll-indicator-text {
+  font-family: "Bebas Neue", system-ui, sans-serif;
+  font-size: 1.8rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.scroll-indicator-icon {
+  color: #ff6347;
+  font-size: 1.5rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ============================================
+   FORMAÇÃO ACADÊMICA
+   ============================================ */
+
+.formacao-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.formacao-item {
+  flex: 0 0 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formacao-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 99, 71, 0.3);
+  border: 1px solid #ff6347;
+}
+
+.formacao-item h3 {
+  font-family: "Bebas Neue", system-ui, sans-serif;
+  font-size: 1.5rem;
+  color: #ff6347;
+  margin-bottom: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.formacao-item p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.formacao-item p:last-child {
+  margin-bottom: 0;
+}
+
+.formacao-item.surge-from-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.formacao-item.surge-from-right.surge-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 1024px) {
+  .formacao-item {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .formacao-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* ============================================
+   NAVIGAÇÃO COM FAN SPEED KNOB
+   ============================================ */
+
+.nav-knob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+/* From Uiverse.io by chase2k25 */
+.wrapper {
+  position: relative;
+  font-family: monospace;
+}
+
+.knob-outer {
+  user-select: none;
+  position: relative;
+  width: 230px;
+  height: 230px;
+  border-radius: 100%;
+  box-shadow:
+    10px 10px 10px rgba(202, 202, 202, 0.2) inset,
+    -10px -10px 10px rgba(151, 151, 151, 0.2) inset;
+  background-color: transparent;
+}
+
+.knob-base {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 220px;
+  height: 220px;
+  margin: -110px 0 0 -110px;
+  border-radius: 100%;
+  box-shadow:
+    inset 0 3px 10px rgba(0, 0, 0, 0.6),
+    0 2px 20px rgba(255, 255, 255, 0.1) inset;
+  background: radial-gradient(ellipse at center, #333 0%, #111 100%);
+}
+
+.knob-middle {
+  z-index: 4;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 140px;
+  height: 140px;
+  margin: -70px 0 0 -70px;
+  border-radius: 100%;
+  box-shadow:
+    inset 0 2px 2px rgba(255, 255, 255, 0.2),
+    0 3px 13px rgba(0, 0, 0, 0.85);
+  background: #111;
+}
+
+.knob-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -60px 0 0 -60px;
+  border-radius: 100%;
+  background: #222;
+}
+
+.knob-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+  border-radius: 100%;
+  box-shadow:
+    inset 0 2px 3px rgba(255, 255, 255, 0.3),
+    0 8px 20px rgba(0, 0, 0, 0.9);
+  background: #333;
+}
+
+.control {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.knob-base .control label {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 70px;
+  margin-top: -35px;
+  transform-origin: 0% 50%;
+  cursor: pointer;
+}
+
+.knob-base .control label span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 70px;
+  text-align: center;
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+}
+
+.knob-base .control label span a {
+  color: #0f0;
+  text-decoration: none;
+  text-shadow: 0 0 5px #0f0;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.knob-base .control label span a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #0f0;
+}
+
+.knob-base .control label:nth-child(1) {
+  transform: rotate(-90deg);
+}
+
+.knob-base .control label:nth-child(1) span {
+  transform: rotate(90deg);
+}
+
+.knob-base .control label:nth-child(2) {
+  transform: rotate(-30deg);
+}
+
+.knob-base .control label:nth-child(2) span {
+  transform: rotate(30deg);
+}
+
+.knob-base .control label:nth-child(3) {
+  transform: rotate(30deg);
+}
+
+.knob-base .control label:nth-child(3) span {
+  transform: rotate(-30deg);
+}
+
+.knob-base .control label:nth-child(4) {
+  transform: rotate(90deg);
+}
+
+.knob-base .control label:nth-child(4) span {
+  transform: rotate(-90deg);
+}
+
+.knob-base .control label:nth-child(5) {
+  transform: rotate(150deg);
+}
+
+.knob-base .control label:nth-child(5) span {
+  transform: rotate(-150deg);
+}
+
+.knob-base .control label:nth-child(6) {
+  transform: rotate(210deg);
+}
+
+.knob-base .control label:nth-child(6) span {
+  transform: rotate(-210deg);
+}
+
+.knob-base .control input {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ============================================
+   MODAL PAPIRO – PROJETOS
+   ============================================ */
+
+/* Modal full-screen: cobre a tela inteira */
+.papiro-modal {
+  position: fixed;
+  inset: 0;                            /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.75);     /* fundo escuro translúcido */
+  display: flex;
+  justify-content: center;             /* centraliza horizontal */
+  align-items: center;                 /* centraliza vertical */
+  padding: 20px;
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+
+/* Esconde o modal enquanto não for alvo */
+.papiro-modal:not(:target) {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Mostra quando o id é “alvo” via href="#detalhes-..." */
+.papiro-modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Área clicável fora do papiro: ocupa toda a tela por baixo do conteúdo */
+.papiro-overlay {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+/* Caixa do papiro, centralizado */
+.papiro-content {
+  position: center;
+  width: 70%;              /* largura relativa à tela */
+  max-width: 900px;        /* limite máximo em pixels */
+  max-height: 85vh;        /* não passa de 85% da altura da janela */
+  padding: 40px 30px;
+  overflow-y: auto;        /* se o texto for muito, scroll interno */
+
+  box-sizing: border-box;
+  background: #f3e4c8;
+  color: #3b2a1a;
+  font-family: "Open Sans", system-ui, sans-serif;
+  line-height: 1.8;
+  border-radius: 10px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    inset 0 0 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid #d1b184;
+}
+
+/* “Rolinhos” nas bordas do papiro */
+.papiro-content::before,
+.papiro-content::after {
+  content: "";
+  position: relative;
+  left: 50%;
+  width: 90%;
+  height: 14px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, #b58b4c 0%, #5e3c16 70%, transparent 100%);
+  opacity: 0.8;
+}
+
+.papiro-content::before {
+  top: -10px;
+}
+
+.papiro-content::after {
+  bottom: -10px;
+}
+
+/* Títulos e textos dentro do papiro (se quiser) */
+.papiro-content h2,
+.papiro-content h3 {
+  font-family: "Bebas Neue", system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #3b2a1a;
+}
+
+.papiro-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.papiro-content p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+/* Links dentro do papiro */
+.papiro-content a {
+  color: #b45309;
+  text-decoration: none;
+}
+
+.papiro-content a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   MODAL PAPIRO (SOBRE MIM )
+   ============================================ */
+
+ Modal full-screen, escondido por padrão com :not(:target) */
+.papiro-modal {
+  position: relative;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  z-index: 100;
+  transition: opacity 0.3s ease;
+}
+
+/* Esconde o modal enquanto não for alvo */
+.papiro-modal:not(:target) {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Mostra quando o id é “alvo” via href="#papiro-..." */
+.papiro-modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Área clicável fora do papiro para fechar */
+.papiro-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+/* Caixa do papiro */
+.papiro-content {
+  position: absolute;
+
+  /* TAMANHO – ajustado para ficar maior */
+  width: 500%;        /* antes 50%: ocupa mais largura da tela */
+  max-width: 800px; /* antes 800px: permite ficar maior em monitores grandes */
+  max-height: 80vh;  /* antes 80vh: ocupa até 90% da altura da janela */
+
+  padding: 50px 40px; /* levemente reduzido para caber mais texto */
+  overflow-y: auto;   /* se passar do limite, cria scroll interno */
+  box-sizing: border-box;
+
+  background: #f3e4c8;
+  color: #3b2a1a;
+  font-family: "Open Sans", system-ui, sans-serif;
+  line-height: 1.8;
+  z-index: 1;
+
+  border-radius: 10px;
+  box-shadow:
+    0 40px 60px rgba(0, 0, 0, 0.6),
+    inset 0 0 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid #d1b184;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* “Rolinhos” nas bordas do papiro */
+.papiro-content::before,
+.papiro-content::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  width: 0%;
+  height: 14px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, #b58b4c 0%, #5e3c16 70%, transparent 100%);
+  opacity: 0.8;
+}
+
+.papiro-content::before {
+  top: -10px;
+}
+
+.papiro-content::after {
+  bottom: -10px;
+}
+
+/* Título dentro do papiro */
+.papiro-content h2 {
+  font-family: "Bebas Neue", system-ui, sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #3b2a1a;
+}
+
+/* Parágrafos do papiro */
+.papiro-content p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+/* Botão de fechar (X) */
+.papiro-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #3b2a1a;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.papiro-close:hover {
+  color: #8b4513;
+}
+
+
+/* ============================================
+   BOTÕES GLOW (From Uiverse.io by cssbuttons-io)
+   ============================================ */
+
+button {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: #5f4ba7;
+  --btn-color: rgb(100, 61, 136);
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow:
+    0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 200%;
+  left: 0;
+  height: 100%;
+  width: 90%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow:
+    0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+button:active {
+  box-shadow:
+    0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+}
+
+/* Layout de projetos: título de um lado, botões do outro */
+
+.projetos-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px 40px;
+}
+
+/* Bloco do título */
+
+.projetos-titulo h1 {
+  margin: 0 0 10px 0;
+}
+
+.projetos-titulo p {
+  margin: 0;
+}
+
+/* Bloco dos botões */
+
+.projetos-botoes {
+  display: flex;
+  flex-direction: line;
+  gap: 16px;
+}
+
+/* ============================================
+   CONTATO – CARD DE REDES
+   ============================================ */
+
+.contato-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+/* Loader dentro da página de contato (menos agressivo) */
+.contato-page .loader-wrapper {
+  position: static;
+  scale: 1.5;
+}
+
+/* From Uiverse.io by MijailVillegas */
+.card {
+  max-width: fit-content;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(15px);
+  box-shadow:
+    inset 0 0 20px rgba(255, 255, 255, 0.192),
+    inset 0 0 5px rgba(255, 255, 255, 0.274),
+    0 5px 5px rgba(0, 0, 0, 0.164);
+  transition: 0.5s;
+}
+
+.card:hover {
+  animation: ease-out 5s;
+  background: rgba(173, 173, 173, 0.05);
+}
+
+.card ul {
+  padding: 1rem;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.card ul li {
+  cursor: pointer;
+}
+
+.svg {
+  transition: all 0.3s;
+  padding: 1rem;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  color: rgb(255, 174, 0);
+  fill: currentColor;
+  box-shadow:
+    inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5),
+    0 5px 5px rgba(0, 0, 0, 0.164);
+}
+
+.text {
+  opacity: 0;
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.3s;
+  color: rgb(255, 174, 0);
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  z-index: 9999;
+  box-shadow:
+    -5px 0 1px rgba(153, 153, 153, 0.2),
+    -10px 0 1px rgba(153, 153, 153, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5),
+    0 5px 5px rgba(0, 0, 0, 0.082);
+}
+
+/* isometric projection para os ícones */
+
+.iso-pro {
+  transition: 0.5s;
+}
+
+.iso-pro:hover a > .svg {
+  transform: translate(15px, -15px);
+  border-radius: 100%;
+}
+
+.iso-pro:hover .text {
+  opacity: 1;
+  transform: translate(25px, -2px) skew(-5deg);
+}
+
+.iso-pro:hover .svg {
+  transform: translate(5px, -5px);
+}
+
+.iso-pro span {
+  opacity: 0;
+  position: absolute;
+  color: #1877f2;
+  border-color: #1877f2;
+  box-shadow:
+    inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5),
+    0 5px 5px rgba(0, 0, 0, 0.164);
+  border-radius: 50%;
+  transition: all 0.3s;
+  height: 60px;
+  width: 60px;
+}
+
+.iso-pro:hover span {
+  opacity: 1;
+}
+
+.iso-pro:hover span:nth-child(1) { opacity: 0.2; }
+.iso-pro:hover span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+.iso-pro:hover span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+.iso-pro:hover span:nth-child(4) {
+  opacity: 0.8;
+  transform: translate(15px, -15px);
+}
+
+/* Cabeçalho da página de formação */
+.formacao-header {
+  text-align: center;
+  padding: 40px 20px 10px;
+}
+
+.formacao-header h1 {
+  font-family: "Bebas Neue", system-ui, sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.formacao-header p {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+/* Container das pastas de formação */
+.formacao-files {
+  padding: 20px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Cada “pasta” */
+.file-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Caixa da pasta (substitui .file que hoje não tem estilo) */
+.file {
+  width: 180px;
+  height: 120px;
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  border-radius: 12px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* As faixas “work-1..5” só para dar um efeito */
+.work-1,
+.work-2,
+.work-3,
+.work-4,
+.work-5 {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.work-1 { top: 20px; }
+.work-2 { top: 35px; }
+.work-3 { top: 50px; }
+.work-4 { top: 65px; }
+.work-5 { top: 80px; }
+
+/* Estilos “tipo Tailwind” que você usou no <p> */
+.text-3xl {
+  font-size: 1.4rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.opacity-20 {
+  opacity: 0.2;
+}
+
+/* ============================================
+   FORMAÇÃO – CARDS LADO A LADO
+   ============================================ */
+
+.formacao-cards {
+  display: flex;              /* coloca os cards lado a lado */
+  flex-wrap: wrap;            /* permite quebrar linha se a tela for menor */
+  gap: 20px;                  /* espaço entre os cards */
+  justify-content: center;    /* centraliza tudo na horizontal */
+  align-items: flex-start;    /* alinha pelo topo */
+  padding: 40px 20px;         /* espaço interno em volta */
+}
+
+/* Se quiser limitar a largura de cada card */
+.formacao-cards .card {
+  max-width: 280px;           /* ajusta de acordo com seu gosto */
+}
+
+/* ============================================
+   HABILIDADES – SISTEMA SOLAR
+   ============================================ */
+
+/* Ajuste básico da section de habilidades */
+main section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+main section h2 {
+  font-family: "Bebas Neue", system-ui, sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* Container geral do sistema solar */
+.solar-system {
+  position: relative;
+  width: 500px;          /* largura da área do sistema */
+  height: 500px;         /* altura da área do sistema */
+  margin: 0 auto;        /* centraliza no meio da página */
+  border-radius: 50%;
+  /* só para você visualizar limite enquanto ajusta:
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  */
+}
+
+/* Sol no centro */
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffdd55 0%, #ff9900 60%, #cc6600 100%);
+  box-shadow:
+    0 0 30px rgba(255, 204, 0, 0.8),
+    0 0 60px rgba(255, 140, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Conteúdo dentro do sol */
+.sun-core {
+  position: relative;
+  text-align: center;
+  color: #3b2500;
+}
+
+.sun-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.sun-text {
+  font-family: "Bebas Neue", system-ui, sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Glow extra ao redor do sol (opcional) */
+.sun-glow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Órbitas: círculos concêntricos que giram */
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  animation: orbit-rotate 20s linear infinite;
+}
+
+/* Tamanhos diferentes para cada órbita */
+.orbit-1 { width: 180px; height: 180px; animation-duration: 12s; }
+.orbit-2 { width: 240px; height: 240px; animation-duration: 18s; }
+.orbit-3 { width: 300px; height: 300px; animation-duration: 24s; }
+.orbit-4 { width: 360px; height: 360px; animation-duration: 30s; }
+.orbit-5 { width: 420px; height: 420px; animation-duration: 36s; }
+.orbit-6 { width: 460px; height: 460px; animation-duration: 42s; }
+.orbit-7 { width: 500px; height: 500px; animation-duration: 48s; }
+
+/* Planeta: fica na borda da órbita e gira junto */
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 100%;             /* coloca o planeta na borda direita da órbita */
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Bolinha com ícone da skill */
+.planet-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #2b6cb0 0%, #1a365d 60%, #0b1120 100%);
+  box-shadow:
+    0 0 10px rgba(59, 130, 246, 0.8),
+    0 0 20px rgba(37, 99, 235, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.planet-icon img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+/* Nome da habilidade embaixo do “planeta” */
+.planet-name {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  font-family: "Open Sans", system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #e2e8f0;
+}
+
+/* Animação de rotação das órbitas (leva os planetas junto) */
+@keyframes orbit-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Opcional: direções e velocidades ligeiramente diferentes */
+.orbit-2 { animation-direction: normal; }
+.orbit-4 { animation-direction: normal; }
+.orbit-6 { animation-direction: normal; }

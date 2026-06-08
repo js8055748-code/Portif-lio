@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formação - Juarez Silva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- NAVIGAÇÃO COM FAN SPEED KNOB -->
+  <nav class="nav-knob">
+    <div class="fan-speed-knob">
+      <div class="wrapper">
+        <div class="knob-outer">
+          <div class="knob-base">
+            <hr class="divider" />
+            <hr class="divider" />
+            <hr class="divider" />
+            <div class="control">
+              <label for="fan_off"><span class="off"><a href="portifolio.html">OFF</a></span></label>
+              
+              <label for="fan_2"><span><a href="projetos.html">Projetos</a></span></label>
+              <label for="fan_3"><span><a href="habilidades.html">Habilidades</a></span></label>
+              <label for="fan_4"><span><a href="formacao.html">Formação</a></span></label>
+              <label for="fan_5"><span><a href="contato.html">Contato</a></span></label>
+
+              <input id="fan_off" name="fan" checked type="radio" />
+              <input id="fan_1" name="fan" type="radio" />
+              <input id="fan_2" name="fan" type="radio" />
+              <input id="fan_3" name="fan" type="radio" />
+              <input id="fan_4" name="fan" type="radio" />
+              <input id="fan_5" name="fan" type="radio" />
+
+              <div class="pointer"><span></span></div>
+              <div class="marker"><span></span></div>
+
+              <div class="knob-middle">
+                <div class="knob-inner">
+                  <div class="knob-core">
+                    <div class="status">
+                      <div class="off-light"></div>
+                      <div class="speed-lights">
+                        <span class="speed-light"></span>
+                        <span class="speed-light"></span>
+                        <span class="speed-light"></span>
+                        <span class="speed-light"></span>
+                        <span class="speed-light"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- knob-middle -->
+            </div><!-- control -->
+          </div><!-- knob-base -->
+        </div><!-- knob-outer -->
+      </div><!-- wrapper -->
+    </div><!-- fan-speed-knob -->
+  </nav>
+
+  <!-- TÍTULO E DESCRIÇÃO -->
+  <header class="formacao-header">
+    <h1>Deixe me  apresentar.</h1>
+    <p>Sou casado a 28 anos, pai de 2 filhos maravilhosos, avô de 2 netas incríveis.</p>
+    <p>Minha trajetória é marcada por diversas experiências e aprendizados.</p>
+    <p>Estou sempre em busca de novos desafios e oportunidades de crescimento.</p>
+    <p></p>
+
+  </header>
+
+  <!-- CARDS DE VIDRO DAS FORMAÇÕES -->
+  <main class="cards-container">
+    <!-- CARD 1: Sistemas de Informação -->
+    <a href="#papiro-sistemas" class="glass-link">
+      <div class="glass" data-text="Sistemas de Informação" style="--r:-10;">
+        <!-- Ícone genérico de “código” só para ilustrar; você pode trocar -->
+        <svg viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"
+          ></path>
+        </svg>
+      </div>
+    </a>
+
+    <!-- CARD 2: Enfermagem -->
+    <a href="#papiro-enfermagem" class="glass-link">
+      <div class="glass" data-text="Enfermagem" style="--r:5;">
+        <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M232 32C103.5 32 0 135.5 0 264S103.5 496 232 496s232-103.5 232-232S360.5 32 232 32zm0 64c93.1 0 168 74.9 168 168s-74.9 168-168 168S64 357.1 64 264 138.9 96 232 96zm40 40h-32v56h-56v32h56v56h32v-56h56v-32h-56z"
+          ></path>
+        </svg>
+      </div>
+    </a>
+
+    <!-- CARD 3: Técnico em Desenvolvimento de Software -->
+    <a href="#papiro-tecnico" class="glass-link">
+      <div class="glass" data-text="Téc. Desenvolvimento" style="--r:20;">
+        <svg viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"
+          ></path>
+        </svg>
+      </div>
+    </a>
+  </main>
+
+  <!-- PAPIRO SISTEMAS DE INFORMAÇÃO -->
+  <div id="papiro-sistemas" class="papiro-modal">
+    <a href="#" class="papiro-overlay"></a>
+
+    <div class="papiro-content">
+      <button class="papiro-close" aria-label="Fechar">&times;</button>
+
+      <h2>Sistemas de Informação</h2>
+      <h3>Instituição de ensino: Faculdade Pitágoras</h3>
+      <p>... (seu texto completo aqui, igual ao anterior) ...</p>
+    </div>
+  </div>
+
+  <!-- PAPIRO ENFERMAGEM -->
+  <div id="papiro-enfermagem" class="papiro-modal">
+    <a href="#" class="papiro-overlay"></a>
+
+    <div class="papiro-content">
+      <button class="papiro-close" aria-label="Fechar">&times;</button>
+
+      <h2>Enfermagem</h2>
+      <h3>Instituição de ensino: Colégio Técnico CECOM</h3>
+      <p>... (seu texto completo aqui) ...</p>
+    </div>
+  </div>
+
+  <!-- PAPIRO TÉCNICO EM DESENVOLVIMENTO -->
+  <div id="papiro-tecnico" class="papiro-modal">
+    <a href="#" class="papiro-overlay"></a>
+
+    <div class="papiro-content">
+      <button class="papiro-close" aria-label="Fechar">&times;</button>
+
+      <h2>Técnico em Desenvolvimento de Software</h2>
+      <h3>Instituição de ensino: Proz Educação</h3>
+      <p>... (seu texto completo aqui) ...</p>
+    </div>
+  </div>
+</body>
+</html>
