@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<body>
 <!-- NAVIGAÇÃO COM FAN SPEED KNOB -->
 <nav class="nav-knob">
     <div class="fan-speed-knob">
@@ -18,9 +19,9 @@
                     <hr class="divider" />
                     <hr class="divider" />
                     <div class="control">
-                        <label for="fan_off"><span class="off"><a href="portifolio.html">OFF</a></span></label>
+                        <label for="fan_off"><span class="off"><a href="index.html">OFF</a></span></label>
                         <label for="fan_1"><span><a href="sobre.html">Sobre</a></span></label>
-                 
+                        <label for="fan_2"><span><a href="projetos.html">Projetos</a></span></label>
                         <label for="fan_3"><span><a href="habilidades.html">Habilidades</a></span></label>
                         <label for="fan_4"><span><a href="formacao.html">Formação</a></span></label>
                         <label for="fan_5"><span><a href="contato.html">Contato</a></span></label>
@@ -30,8 +31,8 @@
                         <input id="fan_3" name="fan" type="radio" />
                         <input id="fan_4" name="fan" type="radio" />
                         <input id="fan_5" name="fan" type="radio" />
-                        <div class="pointer"><span></span></div>
-                        <div class="marker"><span></span></div>
+                        <div class="pointer"></div>
+                        <div class="marker"></div>
                         <div class="knob-middle">
                             <div class="knob-inner">
                                 <div class="knob-core">
@@ -53,137 +54,137 @@
             </div>
         </div>
     </div>
+</nav>
 
-    <body>
-        <div class="projetos-layout">
-            <div class="projetos-titulo">
-                <h1>Projetos</h1>
-                <p>Alguns dos meus projetos:</p>
-            </div>
+    <div class="projetos-layout">
+        <div class="projetos-titulo">
+            <h1>Projetos</h1>
+            <p>Alguns dos meus projetos:</p>
+        </div>
 
-            <div class="projetos-botoes">
-                <!-- BOTÃO 1 – SITES -->
-                <button onclick="location.hash='detalhes-sites'">
-                    Sites
-                    <span class="btn-projeto-link">Ver detalhes</span>
-                </button>
+        <div class="projetos-botoes">
+            <!-- BOTÃO 1 – SITES -->
+            <button onclick="location.hash='detalhes-sites'">
+                Sites
+                <span class="btn-projeto-link">Ver detalhes</span>
+            </button>
 
-                <div id="detalhes-sites" class="papiro-modal">
-                    <a href="#" class="papiro-overlay"></a>
+            <div id="detalhes-sites" class="papiro-modal">
+                <a href="#" class="papiro-overlay"></a>
 
-                    <div class="papiro-content">
+                <div class="papiro-content">
 
-                        <h2>Sites criados para clientes que pensam fora da caixa</h2>
-                        <p>
-                            Cada um destes sites foi projetado para refletir a identidade única do cliente, utilizando
-                            design moderno, funcionalidade intuitiva e tecnologia de ponta.
-                        </p>
-                        <p>
-                            <a href="https://hlimportss-2aue.vercel.app/" target="_blank">HIMPORT</a>
-                        </p>
-                        <p>
-                            <a href="https://estudio-tatuagem-one.vercel.app/" target="_blank">Estúdio de Tatuagem</a>
-                        </p>
-                        <p>
-                            <a href="https://tabacaria1-0.vercel.app/" target="_blank">Tabacaria</a>
-                        </p>
-                        <p>
-                            <a href="https://k-coreia.netlify.app/" target="_blank">K-Coreia</a>
-                        </p>
-                        <p>
-                            <a href="https://rusticosabores.netlify.app/" target="_blank">Rústico Sabores</a>
-                        </p>
-                    </div>
+                    <h2>Sites criados para clientes que pensam fora da caixa</h2>
+                    <p>
+                        Cada um destes sites foi projetado para refletir a identidade única do cliente, utilizando
+                        design moderno, funcionalidade intuitiva e tecnologia de ponta.
+                    </p>
+                    <p>
+                        <a href="https://hlimportss-2aue.vercel.app/" target="_blank">HIMPORT</a>
+                    </p>
+                    <p>
+                        <a href="https://estudio-tatuagem-one.vercel.app/" target="_blank">Estúdio de Tatuagem</a>
+                    </p>
+                    <p>
+                        <a href="https://tabacaria1-0.vercel.app/" target="_blank">Tabacaria</a>
+                    </p>
+                    <p>
+                        <a href="https://k-coreia.netlify.app/" target="_blank">K-Coreia</a>
+                    </p>
+                    <p>
+                        <a href="https://rusticosabores.netlify.app/" target="_blank">Rústico Sabores</a>
+                    </p>
                 </div>
-
-                <!-- BOTÃO 2 – SISTEMAS -->
-                <button onclick="location.hash='detalhes-sistemas'">
-                    Sistemas
-                    <span class="btn-projeto-link">Ver detalhes</span>
-                </button>
             </div>
+
+            <!-- BOTÃO 2 – SISTEMAS -->
+            <button onclick="location.hash='detalhes-sistemas'">
+                Sistemas
+                <span class="btn-projeto-link">Ver detalhes</span>
+            </button>
         </div>
+    </div>
 
-        <div id="detalhes-sistemas" class="papiro-modal">
-            <a href="#" class="papiro-overlay"></a>
+    <div id="detalhes-sistemas" class="papiro-modal">
+        <a href="#" class="papiro-overlay"></a>
 
-            <div class="papiro-content">
+        <div class="papiro-content">
 
 
-                <h2>Programas criados pensando na experiência do usuário</h2>
-                <p>
-                    Cada um destes programas foi projetado para oferecer uma experiência única e intuitiva ao usuário.
-                </p>
-                <p>
-                    Tendo como foco a usabilidade, a eficiência, a segurança e a inovação, cada programa foi
-                    desenvolvido
-                    para atender às necessidades específicas dos usuários.
-                </p>
+            <h2>Programas criados pensando na experiência do usuário</h2>
+            <p>
+                Cada um destes programas foi projetado para oferecer uma experiência única e intuitiva ao usuário.
+            </p>
+            <p>
+                Tendo como foco a usabilidade, a eficiência, a segurança e a inovação, cada programa foi
+                desenvolvido
+                para atender às necessidades específicas dos usuários.
+            </p>
 
-                <h3>Saúde em foco</h3>
-                <p>
-                    Um programa de gerenciamento de saúde para pacientes portadores de doenças crônicas.
-                </p>
-                <p>
-                    Este programa oferece uma interface intuitiva para monitorar dados vitais, agendar consultas,
-                    acessar informações de saúde e se conectar com profissionais, proporcionando uma experiência
-                    personalizada e eficiente.
-                </p>
+            <h3>Saúde em foco</h3>
+            <p>
+                Um programa de gerenciamento de saúde para pacientes portadores de doenças crônicas.
+            </p>
+            <p>
+                Este programa oferece uma interface intuitiva para monitorar dados vitais, agendar consultas,
+                acessar informações de saúde e se conectar com profissionais, proporcionando uma experiência
+                personalizada e eficiente.
+            </p>
 
-                <h3>UB Serviços</h3>
-                <p>
-                    Um APP que promove a ligação entre o cliente que prescisa de algum tipo de serviço e os prestadores
-                    de
-                    serviços.
-                </p>
-                <p>
-                    Este programa oferece uma interface intuitiva para auxiliar o cliente a encontrar o serviço que
-                    precisa,
-                    e os prestadores de serviços a se conectarem com clientes em potencial, proporcionando uma
-                    experiência
-                    personalizada e eficiente.
-                </p>
-                <h3>Bot de Atendimento</h3>
-                <p>
-                    Um bot de atendimento que utiliza inteligência artificial para responder perguntas frequentes e
-                    auxiliar
-                    os usuários na navegação pelos serviços disponíveis.
-                </p>
-                <p>
-                    Este programa oferece uma interface intuitiva para os usuários interagirem com o bot, proporcionando
-                    respostas rápidas e precisas, melhorando a experiência do cliente e otimizando o atendimento.
-                </p>
-                <h3>Monitorador de Criptomoedas</h3>
-                <p>
-                    Um programa que permite aos usuários monitorar o desempenho de suas criptomoedas em tempo real.
-                </p>
-                <p>
-                    Este programa oferece gráficos interativos, alertas de preços e análises de mercado, proporcionando
-                    uma
-                    experiência completa para investidores de criptomoedas.
-                </p>
-                <h3>Gerenciador de Tarefas</h3>
-                <p>
-                    Um programa que ajuda os usuários a gerenciar suas tarefas diárias de forma eficiente.
-                </p>
-                <p>
-                    Este programa oferece uma interface intuitiva para criar, editar e acompanhar o progresso das
-                    tarefas,
-                    permitindo que os usuários se organizem melhor e aumentem sua produtividade.
-                </p>
-                <h3>Sistema para gerenciamento da distribuição de medicamentos</h3>
-                <p>
-                    Um sistema que auxilia na gestão da distribuição de medicamentos em farmácias e hospitais.
-                </p>
-                <p>
-                    Este sistema oferece funcionalidades para controle de estoque, rastreamento de medicamentos, envio
-                    de
-                    notificações para o paciente e gestão de prescrições, garantindo uma distribuição eficiente e
-                    segura.
-                </p>
-            </div>
+            <h3>UB Serviços</h3>
+            <p>
+                Um APP que promove a ligação entre o cliente que prescisa de algum tipo de serviço e os prestadores
+                de
+                serviços.
+            </p>
+            <p>
+                Este programa oferece uma interface intuitiva para auxiliar o cliente a encontrar o serviço que
+                precisa,
+                e os prestadores de serviços a se conectarem com clientes em potencial, proporcionando uma
+                experiência
+                personalizada e eficiente.
+            </p>
+            <h3>Bot de Atendimento</h3>
+            <p>
+                Um bot de atendimento que utiliza inteligência artificial para responder perguntas frequentes e
+                auxiliar
+                os usuários na navegação pelos serviços disponíveis.
+            </p>
+            <p>
+                Este programa oferece uma interface intuitiva para os usuários interagirem com o bot, proporcionando
+                respostas rápidas e precisas, melhorando a experiência do cliente e otimizando o atendimento.
+            </p>
+            <h3>Monitorador de Criptomoedas</h3>
+            <p>
+                Um programa que permite aos usuários monitorar o desempenho de suas criptomoedas em tempo real.
+            </p>
+            <p>
+                Este programa oferece gráficos interativos, alertas de preços e análises de mercado, proporcionando
+                uma
+                experiência completa para investidores de criptomoedas.
+            </p>
+            <h3>Gerenciador de Tarefas</h3>
+            <p>
+                Um programa que ajuda os usuários a gerenciar suas tarefas diárias de forma eficiente.
+            </p>
+            <p>
+                Este programa oferece uma interface intuitiva para criar, editar e acompanhar o progresso das
+                tarefas,
+                permitindo que os usuários se organizem melhor e aumentem sua produtividade.
+            </p>
+            <h3>Sistema para gerenciamento da distribuição de medicamentos</h3>
+            <p>
+                Um sistema que auxilia na gestão da distribuição de medicamentos em farmácias e hospitais.
+            </p>
+            <p>
+                Este sistema oferece funcionalidades para controle de estoque, rastreamento de medicamentos, envio
+                de
+                notificações para o paciente e gestão de prescrições, garantindo uma distribuição eficiente e
+                segura.
+            </p>
         </div>
+    </div>
 
-    </body>
+</body>
 
 </html>
